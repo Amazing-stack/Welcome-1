@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/archivo_black</item>
+        <item>@font/bangers</item>
+        <item>@font/bungee</item>
+        <item>@font/courgette</item>
+        <item>@font/gabriela</item>
+        <item>@font/galada</item>
+        <item>@font/nobile</item>
+        <item>@font/roboto_mono_bold</item>
+        <item>@font/roboto_mono_bold_italic</item>
+        <item>@font/sofia</item>
+        <item>@font/tillana</item>
+        <item>@font/volkhov</item>
+        <item>@font/wendy_one</item>
+    </array>
+</resources>

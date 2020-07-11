@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ppp"
+    tools:context=".MainActivity">
+
+<RelativeLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/background">
+
+<TextView
+    android:id="@+id/signin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="84dp"
+    android:gravity="center"
+    android:text="Sign In"
+    android:textColor="#54abee"
+    android:textSize="40dp"
+    app:fontFamily="@font/bangers" />
+
+    <TextView
+        android:id="@+id/imac"
+        android:layout_width="wrap_content"
+        android:layout_height="99dp"
+        android:layout_centerInParent="true"
+        android:text="Crime Report Point"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        app:drawableTint="#FFFFFF"
+        app:fontFamily="@font/tillana" />
+
+
+<TextView
+    android:id="@+id/btn_reset_password"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/signin"
+    android:layout_marginBottom="5dp"
+    android:gravity="center"
+    android:paddingBottom="16dp"
+    android:text="Already have an account?"
+    android:textColor="@android:color/darker_gray"
+    android:textSize="16dp" />
+
+<LinearLayout
+    android:id="@+id/circle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="140dp"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="1dp">
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:text="                Register"
+        android:textColor="#54abee"
+
+        android:textSize="40dp"
+        app:fontFamily="@font/bangers" />
+</LinearLayout>
+
+
+</RelativeLayout>
+</FrameLayout>
