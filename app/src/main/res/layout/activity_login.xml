@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/noir"
+    android:background="@drawable/sunset"
     tools:context=".LoginActivity">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/background">
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <LinearLayout
@@ -21,11 +26,11 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="231dp"
-                android:layout_height="107dp"
+                android:layout_width="235dp"
+                android:layout_height="111dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="79.3dp"
-                android:src="@drawable/med"/>
+                android:src="@drawable/gps" />
 
 
             <EditText
@@ -34,11 +39,11 @@
                 android:layout_height="58dp"
                 android:layout_marginTop="28dp"
                 android:background="@color/common_google_signin_btn_text_dark_disabled"
-                android:fontFamily="@font/tillana"
-                android:hint="UserName"
-                android:inputType="textEmailAddress"
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/white"
+                android:drawableRight="@drawable/ic_baseline_email_24"
+                android:fontFamily="@font/strait"
+                android:hint=" UserName"
+                android:textColor="@android:color/white"
+                android:textColorHint="#D0D3D4"
                 tools:ignore="HardcodedText" />
 
             <View
@@ -52,12 +57,12 @@
                 android:layout_height="59dp"
                 android:layout_marginTop="38.8dp"
                 android:background="@color/common_google_signin_btn_text_dark_disabled"
-                android:fontFamily="@font/tillana"
+                android:fontFamily="@font/strait"
+                app:passwordToggleEnabled="true"
                 android:hint="Password"
-                android:inputType="numberPassword"
                 android:maxLength="10"
                 android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white" />
+                android:textColorHint="#D0D3D4" />
 
             <View
                 android:layout_width="match_parent"
@@ -84,9 +89,14 @@
                     android:id="@+id/signin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
                     android:layout_marginTop="62dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"
                     android:layout_marginBottom="54dp"
-                    android:background="#2471A3"
+                    android:clickable="true"
+                    android:background="@drawable/circleangle"
                     android:fontFamily="@font/roboto_mono_bold"
                     android:text="Login"
                     android:textColor="@android:color/white"
@@ -100,28 +110,33 @@
                     android:id="@+id/signup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="54dp"
-                    android:layout_marginBottom="34dp"
+                    android:layout_marginTop="192dp"
+                    android:layout_marginBottom="7dp"
                     android:text="Need an account?     Sign up"
                     android:textColor="@android:color/white"
                     app:layout_constraintBottom_toTopOf="@+id/progressBar"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/signin"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints" />
 
                 <ProgressBar
                     android:id="@+id/progressBar"
                     android:layout_width="115dp"
-                    android:layout_height="66dp"
+                    android:layout_height="0dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginBottom="12dp"
                     android:visibility="invisible"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="50dp"
-                    tools:layout_editor_absoluteY="218dp" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signup"
+                    tools:ignore="MissingConstraints" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </RelativeLayout>
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
