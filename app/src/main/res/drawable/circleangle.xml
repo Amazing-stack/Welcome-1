@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:right="0dp" >
+        <shape android:shape="rectangle">
+            />
+            <gradient
+                android:type="linear"
+                android:angle="270"
+                android:startColor="#0082bf"
+                android:endColor="@color/common_google_signin_btn_text_dark_disabled" />
+            <corners android:radius="60dp" />
+
+        </shape>
+    </item>
+
+</layer-list>
