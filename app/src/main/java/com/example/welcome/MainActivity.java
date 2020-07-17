@@ -1,13 +1,12 @@
 package com.example.welcome;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
        mAuth = FirebaseAuth.getInstance();
 
         if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(MainActivity.this, MainActivity.class));
+            startActivity(new Intent(MainActivity.this, DashboardActivity.class));
             finish();
         }
         mSignin = (TextView) findViewById(R.id.signin);

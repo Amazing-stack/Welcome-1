@@ -82,103 +82,47 @@
             android:layout_height="452dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="0dp"
-            android:orientation="vertical"
             tools:layout_editor_absoluteY="278dp">
 
-            <View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#ADCCE2"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="40dp" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email"
-                android:layout_width="373dp"
-                android:layout_height="52dp"
-                android:layout_marginBottom="14dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@color/common_google_signin_btn_text_dark_disabled"
-                android:drawableRight="@drawable/ic_baseline_email_24"
-                android:fontFamily="@font/strait"
-                android:hint="Email"
-                android:padding="16dp"
-                android:textColor="@android:color/white"
-                android:textColorHint="#D0D3D4 "
-                android:textSize="18sp"
-                app:layout_constraintBottom_toTopOf="@+id/password"
+                android:hint="Password"
+                app:boxStrokeColor="@color/design_default_color_secondary"
+                app:counterTextColor="@android:color/white"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/colorAccent"
+                app:errorEnabled="true"
+                app:helperTextTextColor="@android:color/white"
+                app:hintTextColor="#ffffff"
+                app:startIconDrawable="@drawable/ic_baseline_email_24"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="61dp">
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                android:layout_width="407dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="168dp"
+                android:background="@color/common_google_signin_btn_text_dark_disabled"
+                android:textColorHint="@android:color/white"
+                app:endIconMode="password_toggle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
+                app:startIconContentDescription="Name"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:background="#ADCCE2"
-                tools:ignore="MissingConstraints" />
-
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="375dp"
-                android:layout_height="56dp"
-                android:background="@color/common_google_signin_btn_text_dark_disabled"
-                android:fontFamily="@font/strait"
-                android:hint="Password"
-                android:imeOptions="actionDone"
-                android:inputType="textPassword"
-                android:maxLength="12"
-                android:padding="16dp"
-                android:textColor="@android:color/white"
-                android:textColorHint="#D0D3D4 "
-                android:textSize="18sp"
-
-                app:passwordToggleEnabled="true"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="107dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:background="#ADCCE2"
-                tools:ignore="MissingConstraints" />
-
-            <EditText
-                android:id="@+id/dutyid"
-                android:layout_width="375dp"
-                android:layout_height="56dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="52dp"
-                android:background="@color/common_google_signin_btn_text_dark_disabled"
-                android:fontFamily="@font/strait"
-                android:hint="Duty/Duty ID"
-                android:imeOptions="actionDone"
-                android:inputType="textPassword"
-                android:maxLength="12"
-                android:padding="16dp"
-                android:textColor="@android:color/white"
-                android:textColorHint="#D0D3D4 "
-                android:textSize="18sp"
-                app:layout_constraintBottom_toTopOf="@+id/signup"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:passwordToggleEnabled="true"
-                tools:ignore="MissingConstraints" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginBottom="10dp"
-                android:background="#ADCCE2"
-                tools:ignore="MissingConstraints" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/signup"
@@ -193,11 +137,12 @@
                 android:text="Sign up"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
+                app:backgroundTint="@drawable/circleangle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pswrd"
+                app:layout_constraintTop_toBottomOf="@+id/view3"
                 tools:ignore="UnknownId" />
 
             <ProgressBar
@@ -235,6 +180,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/progresbar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/signup" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
